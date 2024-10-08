@@ -27,7 +27,7 @@ const UserCarousel: React.FC = () => {
   return (
     <div className="relative">
       <Swiper
-        onSwiper={(swiper) => (swiperRef.current = swiper)} // Set swiper instance using onSwiper callback
+        onSwiper={(swiper) => (swiperRef.current = swiper)}
         modules={[EffectCards, Autoplay]}
         effect="cards"
         grabCursor={true}
@@ -39,7 +39,7 @@ const UserCarousel: React.FC = () => {
         }}
         slidesPerView="auto"
         cardsEffect={{
-          perSlideOffset: isSmallScreen ? 10 : 22,
+          perSlideOffset: isSmallScreen ? 12 : 22,
           perSlideRotate: 0,
           rotate: false,
           slideShadows: false,
