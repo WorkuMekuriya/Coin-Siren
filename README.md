@@ -6,6 +6,7 @@
 Coin Siren is a Next.js website for [Question Link](https://www.figma.com/design/29huQtp3tx7aVzfKkjDb2n/Assignment-for-Coin-siren?node-id=0-1&node-type=canvas&t=xNZeKpKQx8K4GOQI-0).
 
 ## Table of Contents
+
 - [Installation](#installation)
 - [Usage](#usage)
 - [Folder Structure](#folder-structure)
@@ -13,56 +14,70 @@ Coin Siren is a Next.js website for [Question Link](https://www.figma.com/design
 - [Contributing](#contributing)
 - [License](#license)
 
-
 ## Installation
 
 1. Clone the repository:
 
    ```bash
    git clone https://github.com/WorkuMekuriya/Coin-Siren.git
-   
+
+   ```
+
 2. Navigate to the project directory:
-   ```bash 
+
+   ```bash
    cd Coin-Siren
-   
+
+   ```
+
 3. Install dependencies:
-    ````bash
+
+   ```bash
    npm install
 
-        or
-   
+       or
+
    yarn install
+   ```
 
 ## Usage
- 
+
 1. Run in development mode
-    ````bash
-    yarn dev
-    
-        or
-    
-    npm run dev
-   
+
+   ```bash
+   yarn dev
+
+       or
+
+   npm run dev
+
+   ```
+
 2. Build for production
-   ````bash
+
+   ```bash
    yarn build
 
         or
 
    npm run build
 
+   ```
+
 3. Start for production
 
-   ````bash
+   ```bash
    yarn start
 
         or
 
    npm run start
-   
+
+   ```
+
 ## Folder Structure
 
-````
+```
 coin-siren
     .
     ├── README.md
@@ -139,7 +154,7 @@ coin-siren
     ├── tailwind.config.ts
     ├── tsconfig.json
     └── yarn.lock
-````
+```
 
 ## Dependencies
 

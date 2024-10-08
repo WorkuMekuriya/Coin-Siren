@@ -27,12 +27,12 @@ export const metadata = {
 };
 
 interface RootLayoutProps {
-  children: React.ReactNode; // Define the type for children
+  children: React.ReactNode;
 }
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <html lang="en">
+    <html suppressHydrationWarning lang="en">
       <body className={`${poppins.variable} ${inter.variable} ${pretendard.variable} antialiased`}>
         <Header />
         {children}

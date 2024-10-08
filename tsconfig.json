@@ -21,6 +21,14 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "**/*.svg", "**/*.svgx"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "**/*.svg",
+    "**/*.svgx",
+    "src/app/api/jobs"
+  ],
   "exclude": ["node_modules", "public/icons"]
 }

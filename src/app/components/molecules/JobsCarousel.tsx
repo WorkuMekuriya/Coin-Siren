@@ -9,45 +9,25 @@ import BoxIcon from '@/app/icons/BoxIcon.svg';
 import TargetIcon from '@/app/icons/TargetIcon.svg';
 import CallIcon from '@/app/icons/CallIcon.svg';
 
-// Define the structure for job items
+// Icon mapping based on names returned by the API
+const iconMapping: { [key: string]: React.FC<React.SVGProps<SVGSVGElement>> } = {
+  marketing: MarketingIcon,
+  image: ImageIcon,
+  box: BoxIcon,
+  target: TargetIcon,
+  call: CallIcon,
+};
+
 interface JobItem {
-  icon: React.FC; // Assuming icon is a React functional component
-  title: string; // Title is a string
+  icon: string;
+  title: string;
 }
 
-// Define the job items
-const jobItems: JobItem[] = [
-  {
-    icon: MarketingIcon,
-    title: '해외 마케팅',
-  },
-  {
-    icon: ImageIcon,
-    title: '퍼블리셔',
-  },
-  {
-    icon: BoxIcon,
-    title: '캐드원(제도사)',
-  },
-  {
-    icon: TargetIcon,
-    title: '해외 세일즈',
-  },
-  {
-    icon: CallIcon,
-    title: '해외 CS',
-  },
-  {
-    icon: MarketingIcon,
-    title: '해외 마케팅',
-  },
-  {
-    icon: ImageIcon,
-    title: '퍼블리셔',
-  },
-];
+interface JobCarouselProps {
+  jobItems: JobItem[];
+}
 
-const JobCarousel: React.FC = () => {
+const JobCarousel: React.FC<JobCarouselProps> = ({ jobItems }) => {
   return (
     <Swiper
       spaceBetween={10}
@@ -58,11 +38,15 @@ const JobCarousel: React.FC = () => {
         disableOnInteraction: false,
       }}
       style={{ padding: '0 82px', marginTop: '60px' }}>
-      {jobItems.map((item, index) => (
-        <SwiperSlide key={index}>
-          <JobCard Icon={item.icon} title={item.title} />
-        </SwiperSlide>
-      ))}
+      {jobItems &&
+        jobItems.map((item: JobItem, index: number) => {
+          const IconComponent = iconMapping[item.icon.toLowerCase()];
+          return (
+            <SwiperSlide key={index}>
+              <JobCard Icon={IconComponent} title={item.title} />
+            </SwiperSlide>
+          );
+        })}
     </Swiper>
   );
 };

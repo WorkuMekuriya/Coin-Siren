@@ -7,7 +7,18 @@ import { useMediaQuery } from 'react-responsive';
 import UserCard from '../molecules/UserCard';
 import { Swiper as SwiperCore } from 'swiper/types'; // Import Swiper type from Swiper
 
-const UserCarousel: React.FC = () => {
+interface User {
+  avatar: string;
+  name: string;
+  experience: string;
+  details: string;
+}
+
+interface UserCarouselProps {
+  users: User[];
+}
+
+const UserCarousel: React.FC<UserCarouselProps> = ({ users }) => {
   const isSmallScreen = useMediaQuery({ query: '(max-width: 600px)' });
 
   const swiperRef = useRef<SwiperCore | null>(null); // Correct reference type
@@ -48,16 +59,17 @@ const UserCarousel: React.FC = () => {
           marginLeft: isSmallScreen ? 20 : 150,
           maxWidth: isSmallScreen ? 300 : 450,
         }}>
-        {Array.from({ length: 3 }).map((_, i) => (
-          <SwiperSlide key={i}>
-            <UserCard
-              avatar={'/images/avatar.png'}
-              name={'Abhishek Gupta'}
-              experience={'마케팅 · 2y+'}
-              details={['마케팅 콘텐츠 제작', '인스타그램 관리', '트위터 관리', '블로그 글 작성']}
-            />
-          </SwiperSlide>
-        ))}
+        {users &&
+          users.map((user: User, i: number) => (
+            <SwiperSlide key={i}>
+              <UserCard
+                avatar={user.avatar}
+                name={user.name}
+                experience={user.experience}
+                details={Array.isArray(user.details) ? user.details : [user.details]}
+              />
+            </SwiperSlide>
+          ))}
       </Swiper>
 
       <button

@@ -1,5 +1,4 @@
 'use client';
-
 import DollarIcon from '@/app/icons/DollarIcon.svg';
 import ArrowDownIcon from '@/app/icons/ArrowDownIcon.svg';
 import CheckBoxIcon from '@/app/icons/CheckBoxIcon.svg';
@@ -7,11 +6,26 @@ import CheckBoxIcon from '@/app/icons/CheckBoxIcon.svg';
 import 'swiper/swiper-bundle.css';
 import { motion } from 'framer-motion';
 
-import JobCarousel from '../molecules/JobsCarousel';
-import UserCarousel from '../organisms/UserCarousel';
 import { useMediaQuery } from 'react-responsive';
+import UserCarousel from '@/app/components/organisms/UserCarousel';
+import JobCarousel from '@/app/components/molecules/JobsCarousel';
 
-const HomePage: React.FC = () => {
+interface Props {
+  data: {
+    users: Array<{
+      avatar: string;
+      name: string;
+      experience: string;
+      details: string;
+    }>;
+    jobs: Array<{
+      icon: string;
+      title: string;
+    }>;
+  };
+}
+
+const HomePage: React.FC<Props> = ({ data }) => {
   const isSmallScreen = useMediaQuery({ query: '(max-width: 600px)' });
 
   return (
@@ -70,7 +84,7 @@ const HomePage: React.FC = () => {
               <ArrowDownIcon className="text-color-ef absolute -bottom-2 left-1/2 transform -translate-x-1/2" />
             </div>
 
-            <UserCarousel />
+            <UserCarousel users={data.users} />
           </div>
         </motion.div>
 
@@ -105,7 +119,7 @@ const HomePage: React.FC = () => {
 
       {!isSmallScreen && (
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>
-          <JobCarousel />
+          <JobCarousel jobItems={data.jobs} />
         </motion.div>
       )}
     </main>
