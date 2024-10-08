@@ -81,22 +81,22 @@ const HomePage: React.FC = () => {
         >
           <div className="flex lg:hidden flex-col gap-4 mt-6">
             <div className="text-[16px] flex flex-col gap-2">
-              <div className="flex flex gap-2">
-                <div className="flex items-center gap-3">
+              <div className="flex justify-between">
+                <div className="flex items-center gap-3 flex-1">
                   <CheckBoxIcon />
                   한국어 능력
                 </div>
-                <div className="flex items-center gap-3">
+                <div className="flex items-center gap-3 flex-1">
                   <CheckBoxIcon />
                   업무 수행 능력
                 </div>
               </div>
-              <div className="flex flex gap-2">
-                <div className="flex items-center gap-3">
+              <div className="flex justify-between">
+                <div className="flex items-center gap-3 flex-1">
                   <CheckBoxIcon />
                   겸업 여부
                 </div>
-                <div className="flex items-center gap-3">
+                <div className="flex items-center gap-3 flex-1">
                   <CheckBoxIcon />
                   평판 조회
                 </div>
@@ -105,6 +105,7 @@ const HomePage: React.FC = () => {
 
             <div className="block text-[18px] underline text-color-23">개발자가 필요하신가요?</div>
           </div>
+
         </motion.div>
       </div>
 
