@@ -165,6 +165,7 @@ coin-siren
 - "react-dom": "^18",
 - "react-responsive": "^10.0.0",
 - "swiper": "^11.1.14"
+- "sharp": "^0.33.5"
 
 ## Contributing
 

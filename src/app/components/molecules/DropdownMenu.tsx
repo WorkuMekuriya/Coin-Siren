@@ -23,15 +23,16 @@ const DropdownMenu: React.FC<DropdownMenuProps> = ({ label, items }) => {
       </label>
 
       <div className="absolute z-10 text-[14px] left-0 mt-2 w-[240px] bg-white text-color-4 rounded-lg shadow-lg peer-has-[:checked]:flex hidden flex-col py-2">
-        {items.map((item, index) =>
-          item.isDivider ? (
-            <hr className="py-0 my-2" key={index} />
-          ) : (
-            <a key={index} href={item.href} className={`block py-[10px] px-4 ${item.fontClass || ''}`}>
-              {item.label}
-            </a>
-          ),
-        )}
+        {items &&
+          items.map((item, index) =>
+            item.isDivider ? (
+              <hr className="py-0 my-2" key={index} />
+            ) : (
+              <a key={index} href={item.href} className={`block py-[10px] px-4 ${item.fontClass || ''}`}>
+                {item.label}
+              </a>
+            ),
+          )}
       </div>
     </li>
   );
