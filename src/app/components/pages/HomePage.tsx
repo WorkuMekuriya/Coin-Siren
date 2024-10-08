@@ -98,10 +98,8 @@ const HomePage: React.FC = () => {
                 </div>
               </div>
             </div>
-
             <div className="block text-[18px] underline text-color-23">개발자가 필요하신가요?</div>
           </div>
-
         </motion.div>
       </div>
 
