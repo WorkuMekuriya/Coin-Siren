@@ -74,29 +74,25 @@ const HomePage: React.FC = () => {
           </div>
         </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0 }} // Element starts with opacity 0 (invisible)
-          animate={{ opacity: 1 }} // Change opacity to 1 (visible)
-          transition={{ duration: 0.5 }} // Animation duration of 500ms
-        >
+        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>
           <div className="flex lg:hidden flex-col gap-4 mt-6">
             <div className="text-[16px] flex flex-col gap-2">
-              <div className="flex flex gap-2">
-                <div className="flex items-center gap-3">
+              <div className="flex justify-between">
+                <div className="flex items-center gap-3 flex-1">
                   <CheckBoxIcon />
                   한국어 능력
                 </div>
-                <div className="flex items-center gap-3">
+                <div className="flex items-center gap-3 flex-1">
                   <CheckBoxIcon />
                   업무 수행 능력
                 </div>
               </div>
-              <div className="flex flex gap-2">
-                <div className="flex items-center gap-3">
+              <div className="flex justify-between">
+                <div className="flex items-center gap-3 flex-1">
                   <CheckBoxIcon />
                   겸업 여부
                 </div>
-                <div className="flex items-center gap-3">
+                <div className="flex items-center gap-3 flex-1">
                   <CheckBoxIcon />
                   평판 조회
                 </div>
