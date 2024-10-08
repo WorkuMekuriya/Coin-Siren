@@ -22,7 +22,8 @@ const pretendard = localFont({
 });
 
 export const metadata = {
-  title: 'Hyperhire',
+  title: 'Coin Siren',
+  description: 'Coin Siren is a platform that provides a comprehensive analysis of the cryptocurrency market.',
 };
 
 interface RootLayoutProps {
