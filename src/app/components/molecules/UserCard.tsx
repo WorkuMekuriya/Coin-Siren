@@ -18,7 +18,7 @@ const UserCard: React.FC<UserCardProps> = ({ avatar, name, experience, details }
           <Avatar src={avatar} />
           <Flag />
         </div>
-        <div>
+        <div className="mt-6">
           <div className="text-[24px] text-color-2f">{name}</div>
           <div className="text-[16px] text-color-ff">{experience}</div>
         </div>

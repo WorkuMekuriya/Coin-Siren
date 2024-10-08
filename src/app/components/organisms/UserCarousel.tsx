@@ -52,7 +52,7 @@ const UserCarousel: React.FC = () => {
           <SwiperSlide key={i}>
             <UserCard
               avatar={'/images/avatar.png'}
-              name={'Mekuriya Gupta'}
+              name={'Abhishek Gupta'}
               experience={'마케팅 · 2y+'}
               details={['마케팅 콘텐츠 제작', '인스타그램 관리', '트위터 관리', '블로그 글 작성']}
             />
