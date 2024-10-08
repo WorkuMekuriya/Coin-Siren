@@ -16,14 +16,14 @@ export async function GET() {
         avatar: '/images/avatar.png',
         name: 'Abhishek Gupta',
         experience: 'Marketing · 3y+',
-        details: ['마케팅 콘텐츠 제작', '인스타그램 관리', '트위터 관리', '블로그 글 작성'],
+        details: ['마케팅 콘텐츠 제작', '인스타그램 관리', '트위터 관리'],
       },
       {
         id: 2,
         avatar: '/images/avatar.png',
         name: 'Mekuriya Worku',
         experience: 'Engineer · 6y+',
-        details: ['시스템 설계', '네트워크 관리', '프로그래밍', '보안 유지'],
+        details: ['시스템 설계', '네트워크 관리', '프로그래밍', '보안 유지', '블로그 글 작성'],
       },
       {
         id: 3,
