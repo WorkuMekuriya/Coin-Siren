@@ -5,7 +5,7 @@
   "author": {
     "name": "Mekuriya Worku",
     "email": "mekuriya185@gmail.com",
-    "url": "https://github.com/mekuriyaworku"
+    "url": "https://github.com/workuMekuriya"
   },
   "scripts": {
     "dev": "next dev",
@@ -16,17 +16,23 @@
   },
   "dependencies": {
     "aos": "^2.3.4",
+    "framer-motion": "^11.11.1",
     "next": "14.2.14",
     "react": "^18",
     "react-dom": "^18",
+    "react-responsive": "^10.0.0",
     "swiper": "^11.1.14"
   },
   "devDependencies": {
+    "@babel/helper-string-parser": "^7.25.7",
+    "@svgr/webpack": "^8.1.0",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "eslint": "^8",
     "eslint-config-next": "14.2.14",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
     "postcss": "^8",
     "prettier": "^3.3.3",
     "tailwindcss": "^3.4.1",
